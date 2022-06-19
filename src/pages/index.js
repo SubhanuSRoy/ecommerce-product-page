@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "../components/Header/Header";
 import Main from "../components/Main/Main";
+import Product from "../components/Product/Product";
 import Side from "../components/SIde/Side";
 
 
@@ -19,8 +20,9 @@ export default function Home() {
       <main className="bg-light h-screen">
         <Header />
         <div className="flex items-center justify-between">
-          <Main />
-          <Side />
+          {/* <Main />
+          <Side /> */}
+          <Product />
           
         </div>
       </main>

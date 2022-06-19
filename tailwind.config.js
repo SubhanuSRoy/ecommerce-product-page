@@ -17,6 +17,7 @@ module.exports = {
       'pd': '#424242', //paper dark
       'black': '#303030', //default dark
       'white': '#FFFFFF', //white
+      'red':'#AA4A44', //brick red
     },
     extend: {},
   },
