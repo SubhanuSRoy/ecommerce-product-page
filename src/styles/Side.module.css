@@ -2,9 +2,13 @@
     background-image: url("../assets/bgImage1.png");
     background-color: #f8f5f1;
     background-position: center;
-    width: 24%;
+    width: 40%;
     background-size: contain  ;
     height: 75vh ;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: start;
   }
   

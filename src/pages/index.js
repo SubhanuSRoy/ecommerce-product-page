@@ -20,9 +20,9 @@ export default function Home() {
       <main className="bg-light h-screen">
         <Header />
         <div className="flex items-center justify-between">
-          {/* <Main />
-          <Side /> */}
-          <Product />
+          <Main />
+          <Side />
+          {/* <Product /> */}
           
         </div>
       </main>
