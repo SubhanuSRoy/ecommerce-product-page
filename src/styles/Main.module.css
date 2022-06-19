@@ -1,0 +1,9 @@
+.main {
+  background-image: url("../assets/bgImage1.png");
+  background-color: #f8f5f1;
+  background-position: center;
+  width: 100vw;
+  background-size: contain  ;
+  height: 85vh;
+  background-repeat: no-repeat;
+}

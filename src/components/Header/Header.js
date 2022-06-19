@@ -18,7 +18,7 @@ function Header() {
         <div>new</div>
         <div>sale</div>
         <div>men</div>
-        <div>women</div>
+        <div className="">women</div>
       </div>
 
       <div className="w-1/2 flex justify-around items-center gap-x-40">

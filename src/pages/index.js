@@ -1,7 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Header from '../components/Header/Header'
-
+import Head from "next/head";
+import Image from "next/image";
+import Header from "../components/Header/Header";
+import Main from "../components/Main/Main";
+import Side from "../components/SIde/Side";
 
 export default function Home() {
   return (
@@ -14,6 +15,11 @@ export default function Home() {
 
       <main className="bg-light h-screen">
         <Header />
+        <div className="flex items-center justify-between">
+          <Main />
+          <Side />
+          
+        </div>
       </main>
 
       {/* <footer className={styles.footer}>
@@ -29,5 +35,5 @@ export default function Home() {
         </a>
       </footer> */}
     </div>
-  )
+  );
 }
