@@ -10,7 +10,7 @@ import HeaderIcon from "./HeaderIcon";
 
 function Header() {
   return (
-    <div className="flex items-center px-10 py-6 uppercase w-full justify-between gap-x-80 shadow-md">
+    <div className="flex items-center uppercase w-full justify-between gap-x-80 pb-6 shadow-md">
       <div className="w-1/2 flex justify-around items-center">
         <HeaderIcon Icon={MenuAlt2Icon} active />
         <HeaderIcon Icon={CakeIcon} />
@@ -21,12 +21,12 @@ function Header() {
         <div className="">women</div>
       </div>
 
-      <div className="w-1/2 flex justify-around items-center gap-x-40">
+      <div className="w-1/2 flex justify-around items-center gap-x-40 ">
         <div className="w-1/2 flex justify-around items-center">
           <HeaderIcon Icon={HeartIcon} />
           <div>search</div>
         </div>
-        <div className="w-1/2 flex justify-around items-center">
+        <div className="pl-20 flex justify-around items-center ">
           <HeaderIcon Icon={ShoppingBagIcon} />
           <HeaderIcon Icon={UserIcon} />
         </div>

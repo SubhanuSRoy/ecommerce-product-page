@@ -1,8 +1,10 @@
 import React from 'react'
+import styles from "../../styles/Side.module.css";
+
 
 function Side() {
   return (
-    <div className='w-1/4'>Side</div>
+    <div className={styles.side}></div>
   )
 }
 

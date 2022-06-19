@@ -5,6 +5,7 @@ import pullover from "../../assets/pulloverImg.png";
 import skirt from "../../assets/skirtImg.png";
 import HeaderIcon from "../Header/HeaderIcon";
 import { PlusIcon } from "@heroicons/react/solid";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 function Main() {
   return (
@@ -16,7 +17,7 @@ function Main() {
             Tied Green <br /> V Neck Shirt
           </div>
           <div>
-            <PlusIcon className=" h-5 text-gray-500 text-center sm:h-7  rounded-full bg-black p-2 shadow-md text-white" />
+            <PlusIcon className="h-8 text-center sm:h-10  rounded-full bg-black p-2 shadow-md text-white" />
           </div>
         </div>
 
@@ -55,7 +56,17 @@ function Main() {
           </div>
         </div>
       </div>
-      <div></div>
+      <div className="flex items-center w-full justify-start gap-x-6 pl-24">
+        <div className="p-2 rounded-xl border-td border-2 shadow-md">
+          <FaFacebookF />
+        </div>
+        <div className="p-2 rounded-xl border-td border-2 shadow-md">
+          <FaInstagram />
+        </div>
+        <div className="p-2 rounded-xl border-td border-2 shadow-md">
+          <FaTwitter />
+        </div>
+      </div>
       <div></div>
     </div>
   );

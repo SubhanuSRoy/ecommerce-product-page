@@ -1,0 +1,10 @@
+.side {
+    background-image: url("../assets/bgImage1.png");
+    background-color: #f8f5f1;
+    background-position: center;
+    width: 24%;
+    background-size: contain  ;
+    height: 85vh;
+    background-repeat: no-repeat;
+  }
+  
