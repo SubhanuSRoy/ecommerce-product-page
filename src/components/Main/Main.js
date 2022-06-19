@@ -1,15 +1,33 @@
-import React from "react";
+import React,{useRef,useEffect,useState} from "react";
 import Image from "next/image";
 import styles from "../../styles/Main.module.css";
 import pullover from "../../assets/pulloverImg.png";
 import skirt from "../../assets/skirtImg.png";
-import HeaderIcon from "../Header/HeaderIcon";
+// import HeaderIcon from "../Header/HeaderIcon";
 import { PlusIcon } from "@heroicons/react/solid";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { gsap } from "gsap";
+
 
 function Main() {
+  // reference to the header of the page
+  // const headerRef = useRef();
+  const mainRef = useRef();
+
+  
+  const [animate, setAnimate] = useState(false);
+  const ShowProduct = () => {
+    if (animate) setAnimate(false);
+    else setAnimate(true);
+  };
+
+  // wait until DOM has been rendered
+  useEffect(() => {
+    gsap.from(mainRef.current, { x: -100, duration: 2,delay:1 });
+    gsap.to(mainRef.current, { x: 0, duration: 2, delay: 1 });
+  }, []);
   return (
-    <div className={styles.main}>
+    <div className={styles.main} ref={mainRef}>
       <div className="flex items-end justify-between px-4">
         {/* name + add button */}
         <div className="flex items-center justify-between pb-20 px-20 w-5/12">
@@ -17,7 +35,10 @@ function Main() {
             Tied Green <br /> V Neck Shirt
           </div>
           <div>
-            <PlusIcon className="h-8 text-center sm:h-10  rounded-full bg-black p-2 shadow-md text-white" />
+            <PlusIcon
+              className="h-8 text-center sm:h-10  rounded-full bg-black p-2 shadow-md text-white"
+              onClick={ShowProduct}
+            />
           </div>
         </div>
 

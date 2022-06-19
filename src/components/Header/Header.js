@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useRef,useEffect,useState} from "react";
 import {
   MenuAlt2Icon,
   CakeIcon,
@@ -7,10 +7,23 @@ import {
   UserIcon,
 } from "@heroicons/react/outline";
 import HeaderIcon from "./HeaderIcon";
+import { gsap } from "gsap";
 
 function Header() {
+  // reference to the header of the page
+  // const headerRef = useRef();
+  const headerRef = useRef();
+
+  // wait until DOM has been rendered
+  useEffect(() => {
+    gsap.from(headerRef.current, { y: -100, duration: 2,delay:1 });
+    gsap.to(headerRef.current, { y: 0, duration: 2, delay: 1 });
+  }, []);
   return (
-    <div className="flex items-center uppercase w-full justify-between gap-x-80 pb-6 shadow-md">
+    <div
+      className="flex items-center uppercase w-full justify-between gap-x-80 pb-6 shadow-md"
+      ref={headerRef}
+    >
       <div className="w-1/2 flex justify-around items-center">
         <HeaderIcon Icon={MenuAlt2Icon} active />
         <HeaderIcon Icon={CakeIcon} />
