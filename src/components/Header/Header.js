@@ -21,25 +21,25 @@ function Header() {
   }, []);
   return (
     <div
-      className="flex items-center uppercase w-full justify-between gap-x-80 pb-6 shadow-md"
+      className="flex items-center uppercase w-full justify-between gap-x-80 py-4 shadow-md"
       ref={headerRef}
     >
-      <div className="w-1/2 flex justify-around items-center">
+      <div className="w-1/2 flex justify-around items-center font-Oswald">
         <HeaderIcon Icon={MenuAlt2Icon} active />
         <HeaderIcon Icon={CakeIcon} />
         {/* <div className="pl-10 py-0 border-l-2 border-l-sl">new</div> */}
-        <div>new</div>
-        <div>sale</div>
-        <div>men</div>
-        <div className="">women</div>
+        <div className="font-bold">new</div>
+        <div className="font-bold">sale</div>
+        <div className="font-bold">men</div>
+        <div className="font-bold">women</div>
       </div>
 
-      <div className="w-1/2 flex justify-around items-center gap-x-40 ">
+      <div className="w-1/2 flex justify-around items-center gap-x-40 font-Oswald ">
         <div className="w-1/2 flex justify-around items-center">
           <HeaderIcon Icon={HeartIcon} />
-          <div>search</div>
+          <div className="font-bold">search</div>
         </div>
-        <div className="pl-20 flex justify-around items-center ">
+        <div className=" flex justify-around items-center gap-x-4 ">
           <HeaderIcon Icon={ShoppingBagIcon} />
           <HeaderIcon Icon={UserIcon} />
         </div>

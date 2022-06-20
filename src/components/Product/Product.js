@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useRef,useState,useEffect} from "react";
 import Image from "next/image";
 import { ChevronRightIcon } from "@heroicons/react/solid";
 import Side from "../SIde/Side";
@@ -6,12 +6,22 @@ import p1 from "../../assets/p1.jpg"
 import p2 from "../../assets/p2.jpg"
 import p3 from "../../assets/p3.jpg"
 import HeaderIcon from "../Header/HeaderIcon";
+import gsap from "gsap";
 
 function Product() {
+  // reference to the header of the page
+  // const productRef = useRef();
+  const productRef = useRef();
+
+  // wait until DOM has been rendered
+  useEffect(() => {
+    gsap.from(productRef.current, { x: -100, duration: 2,delay:1 });
+    gsap.to(productRef.current, {x: 0, duration: 2, delay: 1 });
+  }, []);
   return (
-    <div className="flex justify-between w-full pt-16">
+    <div className="flex justify-between w-full pt-16" ref={productRef}>
       {/* product description */}
-      <div className="flex flex-col items-start w-2/3 gap-y-2 pl-20">
+      <div className="flex flex-col items-start w-4/6 gap-y-2 pl-20">
         {/* name of product */}
         <div className="text-4xl uppercase font-bold">
           Tied green <br /> v-neck shirt
