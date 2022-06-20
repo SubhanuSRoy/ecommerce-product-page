@@ -16,8 +16,8 @@ function Header() {
 
   // wait until DOM has been rendered
   useEffect(() => {
-    gsap.from(headerRef.current, { y: -100, duration: 2,delay:1 });
-    gsap.to(headerRef.current, { y: 0, duration: 2, delay: 1 });
+    gsap.from(headerRef.current, { y: -100, duration: 0.2,ease:"bounce" });
+    gsap.to(headerRef.current, { y: 0, duration: 0.2,delay:0.5 });
   }, []);
   return (
     <div

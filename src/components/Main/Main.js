@@ -7,6 +7,8 @@ import skirt from "../../assets/skirtImg.png";
 import { PlusIcon } from "@heroicons/react/solid";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { gsap } from "gsap";
+import p3 from "../../assets/p3.png";
+
 
 
 function Main() {
@@ -23,8 +25,8 @@ function Main() {
 
   // wait until DOM has been rendered
   useEffect(() => {
-    gsap.from(mainRef.current, { x: -100, duration: 2,delay:1 });
-    gsap.to(mainRef.current, { x: 0, duration: 2, delay: 1 });
+    gsap.from(mainRef.current, { x: -100, duration: 0.2,ease:"bounce" });
+    gsap.to(mainRef.current, { x: 0, duration: 0.5,delay:0.5 });
   }, []);
   return (
     <div className={styles.main} ref={mainRef}>
@@ -41,6 +43,13 @@ function Main() {
             />
           </div>
         </div>
+
+        <Image
+          className="shadow-md rounded-md"
+          src={p3}
+          height={600}
+          width={400}
+        />
 
         {/* outfit breakdown cards */}
         <div className="flex flex-col w-1/3 px-6 pt-40 gap-y-6">
