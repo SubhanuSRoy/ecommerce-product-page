@@ -24,7 +24,7 @@ function Main() {
   // wait until DOM has been rendered
   useEffect(() => {
     gsap.from(mainRef.current, { x: -100, duration: 2,delay:1 });
-    gsap.to(mainRef.current, { x: 600, duration: 5, delay: 1 });
+    gsap.to(mainRef.current, { x: 0, duration: 2, delay: 1 });
   }, []);
   return (
     <div className={styles.main} ref={mainRef}>
