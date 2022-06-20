@@ -31,15 +31,10 @@ function Product() {
       .timeline()
       .from(productRef.current, { x: -100, duration: 0.2 })
       .to(productRef.current, { x: 0, duration: 1, ease: "bounce" })
-      .from(imgRef1.current, { opacity: 0, x: 100, duration: 2 })
-      .to(imgRef1.current, { opacity: 1, x: 0, duration: 2, delay: 1 });
+      .from(imgRef1.current, { opacity: 0, x: 100, duration: 1 })
+      .to(imgRef1.current, { opacity: 1, x: 0, duration: 2 });
   }, []);
-  useEffect(() => {
-    t2.current = gsap
-      .timeline()
-      .from(imgRef1.current, { opacity: 0, x: 100, duration: 2 })
-      .to(imgRef1.current, { opacity: 1, x: 0, duration: 2, delay: 1 });
-  }, []);
+  
 
   const reverse = () => {
     t2.current.reverse()
