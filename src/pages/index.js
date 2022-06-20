@@ -12,45 +12,20 @@ import HeaderIcon from "../components/Header/HeaderIcon";
 export default function Home() {
   const [reversed, setReversed] = useState(false);
   const [animate, setAnimate] = useState(false);
-  const el = useRef();
-  // const q = gsap.utils.selector(el);
-  const mainRef = useRef(null);
-
-  // store the timeline in a ref.
-  const tl = useRef();
-
-  useEffect(() => {
-    // add a box and circle animation to our timeline and play on first render
-    tl.current = gsap.timeline().to(mainRef.current, {
-      x: -200,
-    });
-  }, []);
-
-  useEffect(() => {
-    console.log(reversed);
-    // toggle the direction of our timeline
-    tl.current.reversed(reversed);
-  }, [reversed]);
 
   return (
-    <div className="bg-pl h-screen" style={{overflow: "hidden"}}>
+    <div className="bg-pl h-screen" style={{ overflow: "hidden" }}>
       <Head>
         <title>E-Commerce Product Page</title>
         <meta name="description" content="Made by Subhanu" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
-          rel="stylesheet"
-        />
       </Head>
 
       <main className="bg-light h-screen m-4 rounded-xl">
         <Header />
         {!animate && (
-          <div className="flex items-center justify-between" ref={el}>
-            <Main className="main" ref={mainRef}>
+          <div className="flex items-center justify-between">
+            <Main className="main">
               <div>
                 <PlusIcon className="rounded-full bg-black p-2 shadow-md text-white" />
               </div>
