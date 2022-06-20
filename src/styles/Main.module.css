@@ -4,6 +4,9 @@
   background-position: center;
   width: 100vw;
   background-size: contain  ;
-  height: 85vh;
+  height: 88vh;
   background-repeat: no-repeat;
+  border-right: 1px solid #c2c2c2;
+  overflow: hidden;
+  padding-right: 2rem;
 }

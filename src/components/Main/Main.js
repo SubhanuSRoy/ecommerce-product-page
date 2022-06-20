@@ -24,13 +24,13 @@ function Main() {
   // wait until DOM has been rendered
   useEffect(() => {
     gsap.from(mainRef.current, { x: -100, duration: 2,delay:1 });
-    gsap.to(mainRef.current, { x: 0, duration: 2, delay: 1 });
+    gsap.to(mainRef.current, { x: 600, duration: 5, delay: 1 });
   }, []);
   return (
     <div className={styles.main} ref={mainRef}>
       <div className="flex items-end justify-between px-4">
         {/* name + add button */}
-        <div className="flex items-center justify-between pb-20 px-20 w-5/12">
+        <div className="flex items-center gap-x-6 pb-20 px-20 w-6/12">
           <div className="text-4xl uppercase font-bold">
             Tied Green <br /> V Neck Shirt
           </div>
@@ -43,10 +43,10 @@ function Main() {
         </div>
 
         {/* outfit breakdown cards */}
-        <div className="flex flex-col w-1/3 px-6 py-20 gap-y-6">
+        <div className="flex flex-col w-1/3 px-6 pt-40 gap-y-6">
           {/* top */}
           <div
-            className="rounded-2xl p-4 flex items-center justify-between shadow-md h-40 w-80"
+            className="rounded-2xl p-4 flex items-center justify-between shadow-md h-40 w-80 bg-light cursor-pointer"
             style={{ position: "relative" }}
           >
             {/* name and price */}
@@ -64,7 +64,7 @@ function Main() {
           </div>
           {/* bottom */}
           <div
-            className="rounded-2xl p-4 flex items-center justify-between shadow-md h-40 w-80"
+            className="rounded-2xl p-4 flex items-center justify-between shadow-md h-40 w-80 bg-light cursor-pointer"
             style={{ position: "relative" }}
           >
             {/* name and price */}
@@ -77,14 +77,14 @@ function Main() {
           </div>
         </div>
       </div>
-      <div className="flex items-center w-full justify-start gap-x-6 pl-24">
-        <div className="p-2 rounded-xl border-td border-2 shadow-md">
+      <div className="flex items-center w-full justify-start gap-x-6 pl-24 ">
+        <div className="cursor-pointer p-2 rounded-xl border-td border-2 shadow-md">
           <FaFacebookF />
         </div>
-        <div className="p-2 rounded-xl border-td border-2 shadow-md">
+        <div className="cursor-pointer p-2 rounded-xl border-td border-2 shadow-md">
           <FaInstagram />
         </div>
-        <div className="p-2 rounded-xl border-td border-2 shadow-md">
+        <div className="cursor-pointer p-2 rounded-xl border-td border-2 shadow-md">
           <FaTwitter />
         </div>
       </div>

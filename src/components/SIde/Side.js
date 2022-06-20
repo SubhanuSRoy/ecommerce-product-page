@@ -6,9 +6,13 @@ import HeaderIcon from "../Header/HeaderIcon";
 function Side() {
   return (
     <div className={styles.side}>
-      <HeaderIcon Icon={ChevronRightIcon}/>
+      {/* <HeaderIcon
+        Icon={ChevronRightIcon}
+        className={styles.arrow}
+        style={{ padding: 0 }}
+      /> */}
     </div>
   );
 }
 
-export default Side;
+export default Side;    
